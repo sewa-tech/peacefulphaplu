@@ -160,14 +160,20 @@
 
 	$('.appointment_time').timepicker();
 
-function checkURL() {
+  function checkURL() {
+  // Get the current page URL
   var currentURL = window.location.href;
+
+  // Check if the URL contains "hotelpeacefulphaplu"
   if (!currentURL.includes("hotelpeacefulphaplu")) {
+    // URL does not contain "hotelpeacefulphaplu"
     document.body.innerHTML = ''; // Clear everything inside the body tag
 
     // Create a new element for the message
     var message = document.createElement('div');
-    message.innerHTML = "<div style='color:black;'><p>This website is not designed for your domain. Please contact <a href='https://sewatech.com.np'>sewatech.com.np</a> for the setup.</p></div>";
+    message.innerHTML = "<style>p{color:#000;}</style><div><p>This website is not designed for your domain. Please contact <a href='https://sewatech.com.np'>sewatech.com.np</a> for the setup.</p></div>";
+
+    // Append the message to the body
     document.body.appendChild(message);
   }
 }
